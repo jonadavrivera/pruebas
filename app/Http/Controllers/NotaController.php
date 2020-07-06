@@ -55,7 +55,7 @@ class NotaController extends Controller
      */
     public function show($id)
     {
-        //
+        //mostrar
     }
 
     /**
@@ -64,9 +64,8 @@ class NotaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
+    public function edit($id){
+        //funcion para editar
     }
 
     /**
@@ -76,8 +75,7 @@ class NotaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id){
         $nota = Nota::find($id);
         $nota->nombre = $request->nombre;
         $nota->descripcion = $request->descripcion;
@@ -91,8 +89,7 @@ class NotaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id){
         $nota = Nota::find($id);
         $nota->delete();
     }
